@@ -1,0 +1,103 @@
+        "name": "Noeri Huisman"
+      },
+      "license": "MIT",
+      "scripts": {
+        "dev": "concurrently \"rollup -c -w\" \"live-server --port=4000 --no-browser ./example --mount=/js:./dist\"",
+        "build": "rollup -c",
+        "watch": "rollup -c -w"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrxz/fern-aframe-components.git"
+      },
+      "bugs": {
+        "url": "https://github.com/mrxz/fern-aframe-components/issues"
+      },
+      "homepage": "https://github.com/mrxz/fern-aframe-components/tree/main/mirror/#readme",
+      "keywords": [
+        "aframe",
+        "vr",
+        "xr",
+        "webxr"
+      ],
+      "devDependencies": {
+        "@compodoc/live-server": "1.2.3",
+        "concurrently": "^7.1.0",
+        "rollup": "^2.71.1",
+        "rollup-plugin-terser": "^7.0.2"
+      },
+      "gitHead": "4dfa558261659ed703b3a645c7281fe7c5eb4900",
+      "_id": "@fern-solutions/aframe-mirror@1.1.2",
+      "_nodeVersion": "24.13.0",
+      "_npmVersion": "11.6.2",
+      "dist": {
+        "integrity": "sha512-np7bCs1LKOyzbATN9rS1YJPyLkSq97XDQe6xUBEobvDgSCJbv8gexUg+0GBDg0hdnzdTFnaQ0LDRcCn3btaCNA==",
+        "shasum": "0f4a53b37d6f945301ec09045a3a5bbe7ca91821",
+        "tarball": "https://registry.npmjs.org/@fern-solutions/aframe-mirror/-/aframe-mirror-1.1.2.tgz",
+        "fileCount": 5,
+        "unpackedSize": 21771,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDWL9RJXHafQNB0TP0WsWEEPfrqrbkPsuF0MXpc76w+lAIgJhcpERmL9fS+cIDOk6AWbE67Pk7qOoor72sQs0aXfFE="
+          }
+        ]
+      },
+      "_npmUser": {
+        "name": "mrxz",
+        "email": "npm@fern.solutions"
+      },
+      "directories": {
+
+      },
+      "maintainers": [
+        {
+          "name": "mrxz",
+          "email": "npm@fern.solutions"
+        }
+      ],
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages-npm-production",
+        "tmp": "tmp/aframe-mirror_1.1.2_1774864892440_0.933266258071273"
+      },
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2023-01-03T14:08:36.577Z",
+    "modified": "2026-03-30T10:01:32.703Z",
+    "1.0.0": "2023-01-03T14:08:36.829Z",
+    "1.0.1": "2023-01-04T18:57:39.568Z",
+    "1.0.2": "2023-01-04T20:26:17.680Z",
+    "1.0.3": "2023-01-22T15:44:17.395Z",
+    "1.1.0": "2024-03-21T15:02:08.255Z",
+    "1.1.1": "2024-04-05T20:01:56.290Z",
+    "1.1.2": "2026-03-30T10:01:32.583Z"
+  },
+  "bugs": {
+    "url": "https://github.com/mrxz/fern-aframe-components/issues"
+  },
+  "author": {
+    "name": "Noeri Huisman"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mrxz/fern-aframe-components/tree/main/mirror/#readme",
+  "keywords": [
+    "aframe",
+    "vr",
+    "xr",
+    "webxr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrxz/fern-aframe-components.git"
+  },
+  "description": "A-Frame component for high-quality mirrors",
+  "maintainers": [
+    {
+      "name": "mrxz",
+      "email": "npm@fern.solutions"
+    }
+  ],
+  "readme": "# Mirror component\n[![npm version](https://img.shields.io/npm/v/@fern-solutions/aframe-mirror.svg?style=flat-square)](https://www.npmjs.com/package/@fern-solutions/aframe-mirror)\n[![npm version](https://img.shields.io/npm/l/@fern-solutions/aframe-mirror.svg?style=flat-square)](https://www.npmjs.com/package/@fern-solutions/aframe-mirror)\n[![github](https://flat.badgen.net/badge/icon/github?icon=github&label)](https://github.com/mrxz/fern-aframe-components/)\n[![twitter](https://flat.badgen.net/badge/twitter/@noerihuisman/blue?icon=twitter&label)](https://twitter.com/noerihuisman)\n[![mastodon](https://flat.badgen.net/badge/mastodon/@noerihuisman@arvr.social/blue?icon=mastodon&label)](https://arvr.social/@noerihuisman)\n[![ko-fi](https://img.shields.io/badge/ko--fi-buy%20me%20a%20coffee-ff5f5f?style=flat-square)](https://ko-fi.com/fernsolutions)\n\nThe `mirror` component and corresponding `\u003Ca-mirror\u003E` primitive allows a high-quality mirror to be added to your A-Frame scenes with ease. Instead of rendering to a texture, it uses a stencil buffer and renders directly into the framebuffer resulting in a high-quality mirror. It works in both desktop and VR mode.\n\nInspiration for this came from a snippet from Carmack's Unscripted talk during the Meta Connect 2022 (emphasis mine):\n\u003E Almost all the mirrors that you see in VR games are done by rendering a separate view and they're usually **blurrier, aliased, generally not particularly high quality**. While in Home we're doing a neat little trick which is actually what I was doing all the way back in the Doom 3 game, where you sort of flip the world around, render through that cut-out and you can get as high a quality in the mirror as you get looking at things directly.  \n\u003E Source: https://www.youtube.com/watch?v=ouq5yyzSiAw&t=892s\n\nCheckout the example: [Online Demo](https://aframe-components.fern.solutions/mirror) | [Source](https://github.com/mrxz/fern-aframe-components/blob/main/mirror/example/index.html)\n\n## Usage\nLoad the script from [npm](https://www.npmjs.com/package/@fern-solutions/aframe-mirror) or add the following script tag:\n```HTML\n\u003Cscript src=\"https://cdn.jsdelivr.net/npm/@fern-solutions/aframe-mirror/dist/mirror.umd.min.js\"\u003E\u003C/script\u003E\n```\n\nThe `a-mirror` primitive can be added to your scene as follows:\n```HTML\n\u003Ca-mirror position=\"0 1.2 -3\" scale=\"1 2 1\" rotation=\"0 180 0\"\u003E\u003C/a-mirror\u003E\n```\n\nAdditionally layers can be specified to show or hide objects in the mirror view. For example, you might want to render the avatar of the user only in the mirror and not the main camera view.\n\n\u003E [!NOTE]\n\u003E The stencil buffer is no longer enabled by default since A-Frame 1.6.0. You can enabled it using the [stencil property](https://aframe.io/docs/1.7.0/components/renderer.html#properties_stencil) of the renderer component (`\u003Ca-scene renderer=\"stencil: true\"\u003E`)\n\n## Properties\n| Name | Type | Default |Description |\n| ---- | ---- | ------- |----------- |\n| `layers` | array | [0] | List of layers that should be enabled when rendering the mirror view |\n\n## Limitations\n* Mirrors are not rendered recursively, so any mirror seen from another mirror will just render as an opaque plane\n* Avoid mixing transparency with mirrors (e.g. looking at a mirror through transparent objects). Depending on the render-order this either results in the overlap being an opaque mirror or the transparent object not being visible.\n",
+  "readmeFilename": "README.md"
